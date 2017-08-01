@@ -1,0 +1,5 @@
+FROM ms/jdk8
+MAINTAINER zookeeper348 "dingchuang@alaxiaoyou.com"
+ADD zookeeper-3.4.8/ /usr/local/zookeeper/
+WORKDIR /usr/local/zookeeper
+ENTRYPOINT ./bin/zkServer.sh start &&  tail -f zookeeper.out

@@ -1,0 +1,9 @@
+FROM centos
+MAINTAINER jdk1.8 "dingchuang@alaxiaoyou.com"
+ADD jdk1.8.0_91/ /usr/local/jdk1.8/
+ENV JAVA_HOME /usr/local/jdk1.8
+ENV PATH $JAVA_HOME/bin:$PATH
+ENV LANG en_US.utf8
+RUN ln -fs /usr/share/zoneinfo/Asi
+a/Shanghai /etc/localtime
+RUN echo Asia/Shanghai > /etc/timezone

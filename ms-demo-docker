@@ -1,0 +1,5 @@
+FROM registry-internal.cn-hangzhou.aliyuncs.com/xmbaby-pre/ms-jdk8
+MAINTAINER pre-config-ms dingchuang@alaxiaoyou.com
+ADD alaxiaoyou-config-service-0.0.1-SNAPSHOT.jar /data/httpd/
+WORKDIR /data/httpd/
+ENTRYPOINT java -Xmx256m -Xss512k -jar alaxiaoyou-config-service-0.0.1-SNAPSHOT.jar
